@@ -83,7 +83,7 @@ function add(lista, elemento) {
     }
 
     if (!isFull(lista)) {
-        lista[lista.length] = elemento;
+        lista.push(elemento);
     } else {
         throw "La lista está llena..";
     }
@@ -226,7 +226,7 @@ function capacity(lista) {
 function clear(lista) {
 
     if (!isEmpty(lista))
-        lista.length = 0;
+        lista.clear();
 }
 
 /**
