@@ -5,7 +5,7 @@
  */
 
 
-document.title = "Tarea03 - Ejercicio 1";
+document.title = "Tarea03 - Ejercicio 3";
 
 NUMMAXELEMENTOS = 0;
 
@@ -226,7 +226,7 @@ function capacity(lista) {
 function clear(lista) {
 
     if (!isEmpty(lista))
-        lista.clear();
+        lista.length = 0;
 }
 
 /**
