@@ -32,7 +32,7 @@ function create(numMaxElementos) {
  * @returns {Boolean}
  */
 
-function  isEmpty(lista) {
+function isEmpty(lista) {
 
     return (lista.length === 0);
 }
@@ -45,7 +45,7 @@ function  isEmpty(lista) {
  * @returns {Boolean}
  */
 
-function  isFull(lista) {
+function isFull(lista) {
 
     return (lista.length === NUMMAXELEMENTOS);
 
@@ -225,8 +225,13 @@ function capacity(lista) {
 
 function clear(lista) {
 
-    if (!isEmpty(lista))
-        lista.length = 0;
+    var elem = Number.NaN;
+    if (!isEmpty(lista)) { //Se hace si la cola no está ya vacía
+        var length = size(lista);
+        for (var i = 0; i < length; i++) {
+            lista[i] = Number.NaN; //Recorremos los elementos y generamos un NaN
+        }
+    }
 }
 
 /**
