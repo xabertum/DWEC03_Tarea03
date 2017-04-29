@@ -5,19 +5,75 @@
         <meta charset="utf-8"/>  
     </head>
     <body>
-        <h1>Implementación de una cola</h1>
-        Introduce un número: <br/>
-        <input type="text" id="num" value="" placeholder="Entero" onfocus="cleanData()" />
-
-        <select name="OS">
-            <option value="1" onclick="add()">add()</option> 
-            <option value="2">Windows 7</option> 
-            <option value="3">Windows XP</option>
-            <option value="10">Fedora</option> 
-            <option value="11">Debian</option> 
-            <option value="12">Suse</option> 
-        </select>
-
+               
+        <h1>JavaScript Objects</h1>
+        <h2>JavaScript uses names to access object properties.</h2>
+        <p id="demo"></p>
+        <p id="isFull"></p>
+        <p id="size"></p>
+        <p id="addAt"></p>
+        <p id="get"></p>
+        <p id="add"></p>
+        <p id="toString"></p>
+        <p id="indexOf"></p>
+        <p id="lastIndex"></p>
+        <p id="capacidad"></p>
+        <p id="clear"></p>
+        <p id="afterClear"></p>
+        <p id="coment"></p>
+        <p id="toStringAfterClear"></p>
+        <p id="firstElement"></p>
+        <p id="lastElement"></p>
+        <p id="remove"></p>
+        <p id="toStringAfterRemove"></p>
+        <p id="removeElement"></p>
+        <p id="afterRemoveElement"></p>
+        <p id="set"></p>
+        
+        
+        <script src = "array_funciones_lista.js"></script>
+        <script>
+            var miLista = create(4);
+            document.getElementById("demo").innerHTML = "resultado de isEmpty (): " + isEmpty(miLista);
+            document.getElementById("isFull").innerHTML = "resultado de isFull (): " + isFull(miLista);
+            document.getElementById("size").innerHTML = "resultado de size (): " + size(miLista);
+            document.getElementById("add").innerHTML = "add() - elemento anadido: " + add(miLista,4);
+            document.getElementById("add").innerHTML = "size() - despues de anadir elemento: " + size(miLista);
+            
+            document.getElementById("addAt").innerHTML = "addAt - añadir elemento 25 en la posicion 0."; 
+            addAt(miLista,25,0);
+            
+            document.getElementById("get").innerHTML = "get() - la posisicon 0, resultado de get(): " + get(miLista,0);
+            document.getElementById("toString").innerHTML = "Funcion toString: " +  toString(miLista);
+            document.getElementById("indexOf").innerHTML = "Index del elemento 0: " + indexOf(miLista,0);
+            document.getElementById("lastIndex").innerHTML = "Index del elemento 45: " + lastIndexOf(miLista,45);
+                       
+            document.getElementById("capacidad").innerHTML = "La capacidad de la lista es: " + capacity(miLista);
+            document.getElementById("clear").innerHTML = "Se borra la lista.";
+            clear(miLista);
+            //document.getElementById("afterClear").innerHTML = toString(miLista);
+            document.getElementById("coment").innerHTML = "Se vuelve a rellenar solo con propositos ilustrativos";
+            
+            add(miLista,0);
+            add(miLista,1);
+            add(miLista,2);
+            add(miLista,3);
+                                    
+            document.getElementById("toStringAfterClear").innerHTML = "Lista llena: " + toString(miLista);
+            document.getElementById("firstElement").innerHTML = "Primer elemento: " + firstElement(miLista);
+            document.getElementById("lastElement").innerHTML = "Ultimo elemento: " + lastElement(miLista);
+            document.getElementById("remove").innerHTML = "Eliminado el elemento 1: ";
+            remove(miLista,1);
+            document.getElementById("toStringAfterRemove").innerHTML = "Lista actualizada: " + toString(miLista);
+            
+            removeElement(miLista,0);
+            document.getElementById("afterRemoveElement").innerHTML = "Lista sin el elemento borrado: " + toString(miLista);
+            
+            
+            
+        </script>
+        
+        
         
         <br/><br/>
 
