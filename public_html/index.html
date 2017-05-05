@@ -1,7 +1,6 @@
 </<!DOCTYPE html>
 <html>
     <head>
-        <title>Implementación de una cola</title>
         <meta charset="utf-8"/>  
     </head>
     <body>
@@ -33,7 +32,7 @@
         
         <script src = "array_funciones_lista.js"></script>
         <script>
-            var miLista = create(4);
+            var miLista = create(6);
             document.getElementById("demo").innerHTML = "resultado de isEmpty (): " + isEmpty(miLista);
             document.getElementById("isFull").innerHTML = "resultado de isFull (): " + isFull(miLista);
             document.getElementById("size").innerHTML = "resultado de size (): " + size(miLista);
@@ -49,15 +48,16 @@
             document.getElementById("lastIndex").innerHTML = "Index del elemento 45: " + lastIndexOf(miLista,45);
                        
             document.getElementById("capacidad").innerHTML = "La capacidad de la lista es: " + capacity(miLista);
-            document.getElementById("clear").innerHTML = "Se borra la lista.";
+            document.getElementById("clear").innerHTML = "Se borra la lista. Lista borrada";
             clear(miLista);
-            //document.getElementById("afterClear").innerHTML = toString(miLista);
+            document.getElementById("afterClear").innerHTML = toString(miLista);
             document.getElementById("coment").innerHTML = "Se vuelve a rellenar solo con propositos ilustrativos";
             
             add(miLista,0);
             add(miLista,1);
             add(miLista,2);
             add(miLista,3);
+            add(miLista,4);
                                     
             document.getElementById("toStringAfterClear").innerHTML = "Lista llena: " + toString(miLista);
             document.getElementById("firstElement").innerHTML = "Primer elemento: " + firstElement(miLista);
@@ -74,12 +74,5 @@
         </script>
         
         
-        
-        <br/><br/>
-
-        <p id="error" style="color:red"></p> 
-        <div id="queue">
-        </div>
-        <script src="queue.js"></script>
     </body>
 </html>
