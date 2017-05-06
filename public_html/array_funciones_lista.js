@@ -23,7 +23,6 @@ function create(numMaxElementos) {
     return lista;
 }
 
-
 /**
  * 
  * Devuelve el numero de elementos de la lista. 
@@ -50,7 +49,6 @@ function isFull(lista) {
     return (lista.length === NUMMAXELEMENTOS);
 
 }
-
 
 /**
  * 
@@ -120,7 +118,6 @@ function addAt(lista, elemento, index) {
 
 }
 
-
 /**
  * Devuelve el elelemtno de la lista de la posición indicada. 
  * 
@@ -174,9 +171,6 @@ function indexOf(lista, elemento) {
     }
     return index;
 }
-
-
-
 
 /**
  * 
