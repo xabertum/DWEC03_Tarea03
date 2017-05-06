@@ -167,6 +167,8 @@ function indexOf(lista, elemento) {
     } else {
         for (var i = 0; i < lista.length; i++) {
 
+            lista.window.console.log(log);
+            
             if (lista[i] === elemento)
                 index = i;
             else
@@ -175,6 +177,9 @@ function indexOf(lista, elemento) {
     }
     return index;
 }
+
+
+
 
 /**
  * 
